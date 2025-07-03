@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<img src="imgbuceta" alt="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANCO TEL AVIV</title>
+</head>
+<body>
+   
+    <header>VOCE ACHA QUE VAI TER UMA VIDA TRANQUILA? FAREMOS TUDO PARA QUE SEJA O CONTRÁRIO</header>
+    <button id="btn-saldo" class="botao-saldo" onclick="promptar()">CLIQUE AQUI PARA VER SEU MARAVILHOSO SALDO</button>
+    <button id="btn-saque" class="botao-saque" onclick="promptar()">CLIQUE AQUI PARA SAQUEAR O SEU SALDO</button>
+    <button id="btn-deposito" class="botao-deposito" onclick="promptar()">CLIQUE AQUI PARA DEPOSITAR O QUE AINDA LHE RESTA</button>
+
+
+</body>
+<style>
+    body {
+        background-image: url(https://media1.tenor.com/m/UuVRSPZe1YkAAAAC/mrfish-lombakka.gif);
+        size: 100%;
+        height: 100%;
+         background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        object-fit: contain;
+        height: 100vh;
+    }
+    header {
+
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border-radius: 1em;
+        margin: 1em auto;
+        background-color: blue;
+        padding: 1em;
+        width: 560px;
+        text-align: center;
+        font-size: 2em;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .botao-saldo {
+         
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 16px;
+        background-color: #fd0000; 
+        color: white;
+        cursor: pointer;
+        margin: 0;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        float: right;
+        transform: translate(-50%, -50%);
+        transform: rotateX(-50%);
+        -ms-transform: rotateX(-50%);
+        -ms-transform: rotateY(-50%);
+    }
+
+    .botao-saque {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 16px;
+        background-color: #fd0000; 
+        color: white;
+        cursor: pointer;
+        margin: 0;
+        position: absolute;
+        top: 60%; 
+        left: 50%;
+        float: right;
+        transform: translate(-50%, -50%);
+    }
+    .botao-deposito {
+         border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 16px;
+        background-color: #fd0000; 
+        color: white;
+       margin: 0;
+        position: absolute;
+        top: 60%; 
+        left: 50%;
+        float: right;
+        transform: translate(-50%, 125%);
+    
+       
+    }
+    button {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+</style>
+
+<script>
+    let total = 1000;
+    function promptar() {
+    alert (`seu saldo é de R$ ${total}`);
+    };
+
+    document.getElementById('btn-saque').addEventListener('click', function () {
+       let saque = prompt ("vai sacar quanto?")
+       if (saque > 1000) {
+        alert("saldo insuficiente");
+       } else {
+        alert(`voce sacou R$ ${saque}`);
+        total -= saque
+        alert(`voce tem R$ ${total}`)
+       }
+        });
+       document.getElementById('btn-deposito').addEventListener('click', function () {
+        let deposito = prompt ("quanto voce vai depositar?")
+        deposito = parseInt (deposito, 10)
+        total += deposito
+        alert(`voce tem R$ ${total}`)
+        
+       })
+</script>
+</html>

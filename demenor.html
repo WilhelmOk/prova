@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+ <img src="img" alt="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menor ou Maior (de idade)</title>
+</head>
+
+<body>
+    <header class="cabecalho">VOCÊ É UM DIMENOR OU UM CRIA PONTO DE INTERROGAÇÃO</header>
+    
+      <!-- primeiro codigo, caso quiser ver ele e não o desafio, descomente ele 
+     <button id="idade" onClick="promptfoda()" type="button">não aperte o botão</button>-->
+    <input class="texto" type="text" id="nome" placeholder="Digite seu nome">
+    <input type="date" class="data" id="idade" placeholder="Digite seu nome">
+     <button class="botao" id="idade, nome" onclick="promptfoda()"> não clique aqui</button>
+    <script> 
+
+       
+
+        //function promptfoda() {
+            //let nome = prompt('Qual é o seu nome?');
+            //let idade = prompt('Qual é a sua idade?');
+            //if (idade <= 17) {
+           //     alert(`${nome}, voce tem ${idade} ano(s), logo não é um cria. Volte quando tiver 18 anos, seu bostinha`)
+           // } else {
+            //    alert(`${nome} entra ae, tu é de maior`)
+           // }
+       // }
+       
+         function promptfoda() {
+            function idade() {
+                 let nome = document.getElementById("nome").value;
+        let datanascimento = new Date(document.getElementById("idade").value); 
+
+            var hoje = new Date();
+            var diffInMilliSeconds = hoje.getTime() - datanascimento.getTime();
+             var diffInYears = diffInMilliSeconds/1000/60/60/24/365.25;
+            let idade = new Date(document.getElementById("idade").value);
+            if (diffInYears < 18) { 
+                alert(`${nome}, você tem ${diffInYears} ano(s), logo não é um cria. Volte quando tiver 18 anos, seu bostinha`);
+            } else {
+                alert(`${nome}, entra aí, tu é de maior`);
+            }
+    
+        }
+        idade();
+            }
+        
+
+    </script>
+</body>
+
+<style>
+    .cabecalho {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        background-color: green;
+        color: #691ae8;
+        size-adjust: 100%;
+    }
+
+     .date {
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 16px;
+        background-position: center;
+     }
+     .botao {
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 16px;
+        background-color: #fd0000; 
+        color: white;
+        cursor: pointer;
+        margin: 0;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        float: right;
+        transform: translate(-50%, -50%);
+        transform: rotateX(-50%);
+        -ms-transform: rotateX(-50%);
+        -ms-transform: rotateY(-50%);
+        
+
+     }
+
+</style>
+
+</html>
