@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de IMC</title>
+
+    <header class="hoder">QUAL É O SEU IMC</header>
+    <input type="text" id="altura" placeholder="digite sua altura">
+    <input type="text" id="peso" placeholder="digite seu peso">
+    <button id="btn-enviar" class="botao-enviar" onclick="validar_imc()">enviar</button>
+</head>
+<script>
+    function validar_imc() {
+
+        let altura = document.getElementById("altura").value
+        let peso = document.getElementById("peso").value
+
+        peso = parseInt(peso, 10)
+        altura = parseInt(altura, 10) / 100
+        IMC = peso / (altura * altura)
+        
+        if (IMC <= 18.5) {
+            alert (` seu IMC é de ${IMC}, você é magro e sua obsesidade é grau 0`)
+        }
+        else if (IMC > 18.5 && IMC <= 24.9) {
+            alert(`Seu IMC é de ${IMC}, você está com peso normal e sua obesidade é grau 0`);
+        }
+        else if (IMC > 18.5 && IMC > 24.9 && IMC <= 29.9) {
+            alert (`seu imc é de ${IMC}, você tem sobrepeso e sua obesidade é grau I`)
+        }
+
+        else if (IMC > 18.5 && IMC > 25.9 && IMC > 29.9 && IMC <= 39.9) {
+            alert (`seu imc é de ${IMC}, você é obeso e sua obesidade é grau II`)
+        }
+        else if (IMC >= 40) {
+            alert(`seu imc é de ${IMC}, você tem obsesidade grave e sua obsesidade é grau III`)
+        }
+    }
+        
+
+    
+</script>
+
+<body>
+
+</body>
+
+</html>
