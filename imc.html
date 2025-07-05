@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <img src="imgprova" alt="">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +8,8 @@
     <title>Calculador de IMC</title>
 
     <header class="hoder">QUAL É O SEU IMC</header>
-    <input type="text" id="altura" placeholder="digite sua altura">
-    <input type="text" id="peso" placeholder="digite seu peso">
+    <input type="text" id="altura" class="text" placeholder="digite sua altura">
+    <input type="text" id="peso" class="text" placeholder="digite seu peso">
     <button id="btn-enviar" class="botao-enviar" onclick="validar_imc()">enviar</button>
 </head>
 <script>
@@ -43,6 +44,58 @@
     
 </script>
 
+<style>
+ body {
+    background-image: url("imgprova/obeso.png.jpg");
+         size: 100%;
+        height: 100%;
+         background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        object-fit: contain;
+        height: 100vh;
+        text-align: center
+        ;
+ }
+    .hoder {
+        /* eu nao faço a minima ideia de como deixar o header ir do inicio da tela para o outro, entao vai ser assim msm */
+        
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border-radius: 1em;
+        margin: 1em auto;
+        background-color: rgb(110, 5, 29);
+        padding: 1em;
+        width: 560px;
+        text-align: center;
+        font-size: 2em;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .text {
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 16px;
+        background-position: center;
+       
+    }
+
+    .botao-enviar {
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 16px;
+        background-color: #fd0000; 
+        color: white;
+        cursor: pointer;
+        margin: 0;
+    }
+</style>
 <body>
 
 </body>
